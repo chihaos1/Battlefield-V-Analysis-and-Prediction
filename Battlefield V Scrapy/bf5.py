@@ -15,7 +15,7 @@ class BattlefieldVSpider(scrapy.Spider):
             new_url = scrapy.Request(url=profile_url, callback=self.parse_profile)
             yield new_url
         
-        for i in range(150, 243):
+        for i in range(1, 243): #243 pages in total 
             next_page = f'https://battlefieldtracker.com/bfv/leaderboards/stats/all/ScorePerMinute?page={i}'
             yield scrapy.Request(url=next_page, callback=self.parse)
         
