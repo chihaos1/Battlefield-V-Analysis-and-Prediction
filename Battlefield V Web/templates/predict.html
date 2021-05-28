@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Battlefield V Statistics | Predict</title>
+        <link rel="stylesheet" href="static/css/style.css"/>
+    </head>
+    <body class="predictpage">
+        <header class="head-predict">
+            <nav class="nav main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="predict.html">Predict</a></li>
+                </ul>
+            </nav>
+            <br>
+        </header>
+        <h1>Predict My Score</h1>
+        <div>
+            <form action="{{ url_for('predict') }}" class="predict" method="POST" id="BFVPred">
+                <div>
+                    <label class="field">
+                        <input type="number" min=0 name="total_hour" required="required">
+                        <span class="placeholder">Total Hours Played</span>
+                    </label>
+                    <label class="field">
+                        <input type="number" min=0 name="total_damage" required="required">
+                        <span class="placeholder">Total Damage</span>
+                    </label>
+                </div>
+                <br><br>
+                <div>
+                    <label class="field">
+                        <input type="number" min=0 name="kills" required="required">
+                        <span class="placeholder">Kills</span>
+                    </label>
+                    <label class="field">
+                        <input type="number" min=0 name="assists" required="required">
+                        <span class="placeholder">Assists</span>
+                    </label>
+                </div>
+                <br><br>
+                <div>
+                    <label class="field">
+                        <input type="number" min=0 name="deaths" required="required">
+                        <span class="placeholder">Deaths</span>
+                    </label>
+                    <label class="field">
+                        <input type="number" min=0 name="resupplies" required="required">
+                        <span class="placeholder">Resupplies</span>
+                    </label>
+                </div>
+                <br><br>
+                <div>
+                    <label class="field">
+                        <input type="number" min=0 name="heals" required="required">
+                        <span class="placeholder">Heals</span>
+                    </label>
+                    <label class="field">
+                        <input type="number" min=0 name="revives" required="required">
+                        <span class="placeholder">Revives</span>
+                    </label>
+                </div>
+                <br><br>
+                <div>
+                    <label class="field">
+                        <input type="number" min=0 name="wins" required="required">
+                        <span class="placeholder">Wins</span>
+                    </label>
+                    <label class="field">
+                        <input type="number" min=0 name="win_percent" required="required">
+                        <span class="placeholder">Win %</span>
+                    </label>
+                </div>
+                <br><br>
+                <button type="submit" class="sub-button">Predict</button>
+            </form>
+            <br>
+            <div class="result">
+                {{  prediction_text }}
+            </div>
+        </div>
+    </body>
+</html>
