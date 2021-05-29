@@ -3,7 +3,7 @@
 Final Website Link: https://battlefieldv-stats-prediction.herokuapp.com/
 
 **Project Overview:**\
-The project aimed to analyze the statistics of Battlefield V players and to predict and understand a player's ability through Score Per Minute. 
+To analyze the statistics of Battlefield V players and to predict and understand a player's ability through Score Per Minute. 
 
 **Data Collection:**\
 The data were scrapped from [Battlefield Tracker](https://battlefieldtracker.com/), which encompassed ~18k BFV players that were registered on the website (account names have been removed for privacy reason). Scrapy was used for this task and the outputs were stored in a CSV file.  
