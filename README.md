@@ -6,10 +6,10 @@ Final Website Link: https://battlefieldv-stats-prediction.herokuapp.com/
 The project aimed to analyze the statistics of Battlefield V players and to predict and understand a player's ability through Score Per Minute. 
 
 **Data Collection:**\
-The data were scrapped from [Battlefield Tracker](https://battlefieldtracker.com/), which encompassed ~18k BFV players that were registered on the website (account names were removed for privacy reason). Scrapy was used for this task and the outputs were stored in a CSV file.  
+The data were scrapped from [Battlefield Tracker](https://battlefieldtracker.com/), which encompassed ~18k BFV players that were registered on the website (account names have been removed for privacy reason). Scrapy was used for this task and the outputs were stored in a CSV file.  
   
 **Data Analysis and Model Building:**\
-The notebook used for this step could be found [here](https://nbviewer.jupyter.org/github/chihaos1/Battlefield-V-Analysis-and-Prediction/blob/main/Battlefield%20V%20Prediction.ipynb). The analysis used Score Per Minute as the target, which is a variable that represented the amount of points a player could earn every minute. Compared to the other variables, Score Per Minute was the most unbiased indicator because it has little room for manipulation. Achieving a high Score Per Minute requires players to contribute to the team consistently through a match, hence it was chosen as the basis for determining how "good" a player is. A linear regression model was built for predicting the target. 
+The notebook used for this step could be found [here](https://nbviewer.jupyter.org/github/chihaos1/Battlefield-V-Analysis-and-Prediction/blob/main/Battlefield%20V%20Prediction.ipynb). The analysis used Score Per Minute as the target, which was a variable that represented the amount of points a player could earn every minute. Compared to the other variables, Score Per Minute was the most unbiased indicator because it has little room for manipulation. Achieving a high Score Per Minute requires players to contribute to the team consistently through a match, hence it was chosen as the basis for determining how "good" a player is. A linear regression model was built for predicting the target. 
 
 **Model Deployment:**\
 The model was deployed through a web application using Flask. The Home page contained the visualizations of player statistics that were graphed with Chart.js. The Predict page contained input fields for users to enter statistics and generate a prediction for Score Per Minute. 
